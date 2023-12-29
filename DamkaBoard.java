@@ -5,6 +5,8 @@ public class DamkaBoard {
 	public static void main(String[] args) {
 		// declares int variable and gets it from user
 		int num = Integer.parseInt(args[0]);
+		// run nested for loop: one for rows and one for columns
+		// for each even row it creates a little shift
 		for (int i = 0; i < num; i++){
 			for (int j = 0; j < num; j++){
 				if (i % 2 == 0)
@@ -12,6 +14,7 @@ public class DamkaBoard {
 				else
 					System.out.print(" *");
 			}
+			// starts a new line
 			System.out.println();
 		}
 	}
