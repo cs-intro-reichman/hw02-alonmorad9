@@ -49,9 +49,9 @@ public class OneOfEachStats {
 		System.out.println("Number of families with 3 children: " + counterOf3);
 		System.out.println("Number of families with 4 or more children: " + counerOf4more);
 		if (counterOf2 >= counterOf3 && counterOf2 >= counerOf4more)
-			System.out.println("The most common number of children is 2");
+			System.out.println("The most common number of children is 2.");
 		else if (counterOf3 >= counterOf2 && counterOf3 >= counerOf4more)
-			System.out.println("The most common number of children is 3");
+			System.out.println("The most common number of children is 3.");
 		else
 			System.out.println("The most common number of children is 4 or more.");
 		
