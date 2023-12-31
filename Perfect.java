@@ -20,9 +20,8 @@ public class Perfect {
 		// checks if num equals to sum of divisors
 		// if it does it prints the final sentence that was requested else it prints that num isn't perfect number
 		if (num == divisors)
-		System.out.println(perfectNum);
-	else
-		System.out.println(num + " is not a perfect number");
-
+			System.out.println(perfectNum);
+		else
+			System.out.println(num + " is not a perfect number");
 	}
 }

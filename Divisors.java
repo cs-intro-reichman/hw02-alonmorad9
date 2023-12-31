@@ -8,6 +8,7 @@ public class Divisors {
 		// runs on all numbers from 1 to num (including num) and checks if i divides num (means num % i equals 0)
 		for (int i = 1; i <= num; i++){
 			if (num % i == 0)
+				// print i if it's a divisor of num
 				System.out.println(i);
 		}
 	}

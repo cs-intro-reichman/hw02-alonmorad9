@@ -14,7 +14,7 @@ public class DamkaBoard {
 				else
 					System.out.print(" *");
 			}
-			// starts a new line
+			// starts a new line every loop
 			System.out.println();
 		}
 	}

@@ -9,45 +9,64 @@ import java.util.Random;
  */
 public class OneOfEachStats {
 	public static void main (String[] args) {
-		// Gets the two command-line arguments
+		// Gets two command-line arguments
 		int T = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
 		// Initailizes a random numbers generator with the given seed value
         Random generator = new Random(seed);
+		// declares three int variables that will be used as counters for each of the categories
 		int counterOf2 = 0;
 		int counterOf3 = 0;
 		int counerOf4more = 0;
+		// declares double variable that will be used to compute the average number of children
 		double sumOftotalchildren = 0;
+		// runs the for loop T times
 		for (int i = 0; i < T; i++){
-			// declares first random number
-			// 0-0.5 boy, 0.5-1 girl
+			// declares double variable that will be used as a number generator
 			double genderNum;
+			// declares int variable that will be used as a counter
 			int counter = 0;
+			// declares two boolean variables that will help determine if boy/girl was already generated
 			boolean isBoy = false;
 			boolean isGirl = false;
+			// runs while loop as long as boy & girl wasn't generated.
+			// For values: 0-0.5 it's a boy, for values 0.5-1 it's a girl
 			while (isBoy == false | isGirl == false){
+				// generates random number using seed & nextDouble 
 				genderNum = generator.nextDouble();
+				// if the value is under 0.5 == boy
 				if (genderNum < 0.5){
 					isBoy = true;
 				}
+				// if the value is over 0.5 == girl
 				else {
 					isGirl = true;
 				}
+			// counts every loop to know how many childen was born
 			counter++;
+			// sums total number of children
 			sumOftotalchildren++;
 			}
+			// counts the categories using the value of counter
+			// if the loop ran two times, it adds +1 to countersof2 category
 			if (counter == 2)
 				counterOf2++;
+			// if the loop ran three times, it adds +1 to countersof3 category
 			else if (counter == 3)
 				counterOf3++;
+			// if the loop ran four times or more, it adds +1 to countersof4more category
 			else
 				counerOf4more++;
+			// after checking to which category it was related, resets counter for the next loop check
 			counter = 0;
 		}
+		// prints the average number of children
 		System.out.println("Average: " + sumOftotalchildren / T + " children to get at least one of each gender.");
+		// prints counters of each category
 		System.out.println("Number of families with 2 children: " + counterOf2);
 		System.out.println("Number of families with 3 children: " + counterOf3);
 		System.out.println("Number of families with 4 or more children: " + counerOf4more);
+		// check which counter was the maximum and prints it
 		if (counterOf2 >= counterOf3 && counterOf2 >= counerOf4more)
 			System.out.println("The most common number of children is 2.");
 		else if (counterOf3 >= counterOf2 && counterOf3 >= counerOf4more)

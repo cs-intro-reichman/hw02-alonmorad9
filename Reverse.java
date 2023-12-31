@@ -19,7 +19,7 @@ public class Reverse {
 		System.out.println(reversedWord);
 		// checks if the number of letters in the word is even - if it does, the middle letter will be at (placement / 2) -1
 		// if the number of letters in the word is odd the middle letter will be at placement / 2
-		// prints it depend on the case
+		// prints it depends on the case
 		if (word.length() % 2 == 0)
 			System.out.println("The middle character is " + word.charAt(word.length()/2-1));
 		else
